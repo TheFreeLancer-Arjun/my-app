@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import {
   AboutPage,
@@ -35,14 +35,11 @@ import {
 } from "./Screens/Admin";
 
 import AdminLayout from "./Layouts/Admin/AdminLayout";
-
 import WebsiteLayout from "./Layouts/Website/WebsiteLayout";
-// import ModalPage from "./Screens/Website/Modal/ModalPage";
 
 export default function App() {
   return (
     <Router>
-      {/* <ModalPage /> */}
       <Routes>
         {/* Website Routes */}
         <Route path="/" element={<WebsiteLayout />}>
@@ -88,17 +85,12 @@ export default function App() {
             path="/admin/achievements/dist-sports-award"
             element={<DistSportsAwaed />}
           />
-
           <Route path="/admin/achievements/medalist" element={<Medalist />} />
-
           <Route path="/admin/achievements/research" element={<Research />} />
-
-
           <Route path="/admin/team/office-bearer" element={<OfficeBearer />} />
           <Route path="/admin/team/nis-coaches" element={<NisCoaches />} />
           <Route path="/admin/team/annual-report" element={<AnnualReport />} />
           <Route path="/admin/gallery" element={<Gallery />} />
-          
         </Route>
       </Routes>
     </Router>
